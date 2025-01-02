@@ -11,11 +11,14 @@ The solution architecture follows these steps:
 1. **Data Source**: Data is ingested from an external HTTP source.
 2. **Data Ingestion**: Azure Data Factory orchestrates the data ingestion process.
 3. **Raw Data Storage**: Data is stored in Azure Data Lake Gen2 (Bronze Layer).
-4. **Data Transformation**: Azure Databricks is used to transform raw data (Silver and Gold Layers).
-5. **Serving Layer**: Transformed data is stored in Azure Synapse Analytics.
+4. **Data Transformation**: Azure Databricks is used to transform raw data (Silver Layer).
+5. **Loading Layer**: Transformed data is stored in Azure Synapse Analytics (Gold Layer).
 6. **Reporting**: Power BI consumes the data from Azure Synapse to create interactive dashboards.
 
-![AWSolutionArchitecture drawio](https://github.com/user-attachments/assets/ce3daf5e-6e79-46e3-af16-bfa398b7893a)
+![AWSolutionArchitecture drawio](https://github.com/user-attachments/assets/c80fad6d-3051-416d-9fa0-220513c53748)
+
+
+
 
 
 ## Repository Structure
@@ -49,7 +52,7 @@ The solution architecture follows these steps:
 - **Silver Layer**: Process the raw data using the `silver_layer.ipynb` notebook. 
 - **Gold Layer**: Use the SQL scripts (`Create Views Gold.sql`) to prepare the data for analytics and reporting.
 
-### 4. Serving Layer
+### 4. Loading Layer
 - Deploy the transformed data into Azure Synapse Analytics using the provided SQL scripts (`Create External Table.sql`, `Create External Tables and Data Sources.sql`, `Create Schema.sql`).
 
 ### 5. Reporting
