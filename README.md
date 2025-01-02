@@ -15,7 +15,8 @@ The solution architecture follows these steps:
 5. **Serving Layer**: Transformed data is stored in Azure Synapse Analytics.
 6. **Reporting**: Power BI consumes the data from Azure Synapse to create interactive dashboards.
 
-![Solution Architecture](image.png)
+![AWSolutionArchitecture drawio](https://github.com/user-attachments/assets/ce3daf5e-6e79-46e3-af16-bfa398b7893a)
+
 
 ## Repository Structure
 
